@@ -1,0 +1,19 @@
+<circuit>
+	<input id=1> </input>
+	<input id=2> </input>
+	<input id=3> </input>
+	<gate id=11 type=AND>
+		<input type=input id=1> </input>
+		<input type=input id=2> </input>
+	</gate>
+	<gate id=22 type=AND>
+		<input type=input id=3> </input>
+		<input type=gate id=11> </input>
+	</gate>
+	<output id=111>
+		<input type=gate id=11>
+	</output>
+	<output id=222>
+		<input type=gate id=22>
+	</output>
+</circuit>

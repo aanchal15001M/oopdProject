@@ -1,0 +1,33 @@
+<circuit>
+	<input id=1> </input>
+	<input id=2> </input>
+	<input id=3> </input>
+	<gate id=11 type=NOT>
+		<input type=input id=1> </input>
+	</gate>
+	<gate id=22	type=AND>
+		<input type=gate id=11></input>
+		<input type=input id=2></input>
+	</gate>
+	<gate id=33 type=XOR>
+		<input type=gate id=22></input>
+		<input type=input id=3></input>
+	</gate>
+	<gate id=44 type=OR>
+		<input type=input id=1></input>
+		<input type=gate id=33></input>
+	</gate>
+	<output id=444>
+		<input type=gate id=44>
+	</output>
+	<output id=333>
+		<input type=gate id=33>
+	</output>
+	<output id=222>
+		<input type=gate id=22>
+	</output>
+	<output id=111>
+		<input type=gate id=11>
+	</output>
+</circuit>
+	
